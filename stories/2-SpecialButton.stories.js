@@ -1,26 +1,27 @@
-import { withA11y } from '@storybook/addon-a11y';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
-
 import SpecialButton from './SpecialButton.vue';
 
 export default {
   title: 'Special Button',
   component: SpecialButton,
-  decorators: [withA11y, withKnobs],
-  parameters: {
-    jest: ['SpecialButton.spec.js'],
+  argTypes: {
+    isDisabled: { 
+      control: {
+        type: 'boolean'
+      },
+      description: 'Disables the button'
+    },
   }
 };
 
-export const Text = () => ({
+const Template = (args, { argTypes }) => ({
   components: { SpecialButton },
-  props: {
-    isDisabled: {
-      default: boolean('Disabled', false)
-    },
-    text: {
-      default: text('Text', 'A special button')
-    }
-  },
-  template: '<special-button :isDisabled="isDisabled">{{ text }}</special-button>',
+  props: Object.keys(argTypes),
+  template: '<special-button :isDisabled="isDisabled">{{ label }}</special-button>',
 });
+
+export const Special = Template.bind({});
+
+Special.args = {
+  label: 'Special Button',
+  isDisabled: false
+};

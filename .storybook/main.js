@@ -4,8 +4,8 @@ module.exports = {
     '@storybook/addon-actions',
     '@storybook/addon-links',
     '@storybook/addon-a11y',
-    '@storybook/addon-knobs/register',
     '@storybook/addon-storysource',
-    '@storybook/addon-jest'
+    '@storybook/addon-jest',
+    '@storybook/addon-controls'
   ],
 };

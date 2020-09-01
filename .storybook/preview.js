@@ -8,3 +8,7 @@ addDecorator(
     results,
   })
 );
+
+export const parameters = {
+  controls: { expanded: true }
+}

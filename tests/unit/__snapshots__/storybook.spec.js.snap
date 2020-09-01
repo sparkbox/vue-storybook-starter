@@ -16,12 +16,12 @@ exports[`Storyshots Button Text 1`] = `
 </button>
 `;
 
-exports[`Storyshots Special Button Text 1`] = `
+exports[`Storyshots Special Button Special 1`] = `
 <button
-  class="special-button"
+  class="special-button test"
   type="button"
 >
-  A special button
+  Special Button
 </button>
 `;
 
