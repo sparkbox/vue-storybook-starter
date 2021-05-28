@@ -1,5 +1,4 @@
 import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
 import { withA11y } from '@storybook/addon-a11y';
 
 import MyButton from './MyButton';
