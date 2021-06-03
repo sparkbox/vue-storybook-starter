@@ -1,5 +1,7 @@
-node_modules/
+.env
+.jest-test-results.json
 .vscode
+
+node_modules/
 coverage
 storybook-static
-.jest-test-results.json
